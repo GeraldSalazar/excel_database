@@ -1,0 +1,13 @@
+﻿Option Explicit
+Private Sub Workbook_Open()
+    Sheets("dbSheet").Visible = True
+    Sheets("exportSheet").Visible = True
+    'Sheets("exportSheet").Visible = xlVeryHidden
+    Worksheets("searchResultsSheet").UsedRange.Offset(1).ClearContents
+    
+    ActiveWindow.DisplayWorkbookTabs = True
+    
+    
+    dbForm.Show
+    
+End Sub
